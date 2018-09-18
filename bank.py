@@ -12,9 +12,15 @@ while meny != 4:#medans man inte har valt 4, så fortsätter programmet.
         print("Du måste ange en siffra!")#om man skriver fel
     
     if meny == 1:
-        saldo = saldo +int(input("Sätt in pengar: "))  #läger till på värdet
+        try:
+            saldo = saldo +int(input("Sätt in pengar: "))  #läger till på värdet
+        except:
+            print("Ange med siffor!")
     elif meny == 2:
-        saldo = saldo -int(input("Ta ut pengar: "))#tar bort från värdet
+        try:
+            saldo = saldo -int(input("Ta ut pengar: "))#tar bort från värdet
+        except:
+            print("Med siffror!")
     elif meny == 3:
         print("Din saldo är: ", saldo)#skriver ut värdet
     elif meny ==4:
